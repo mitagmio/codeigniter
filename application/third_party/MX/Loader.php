@@ -99,7 +99,7 @@ class MX_Loader extends CI_Loader
 	}
 
 	/** Load a module helper **/
-	public function helper($helper) {
+	public function helper($helper = array()) {
 		
 		if (is_array($helper)) return $this->helpers($helper);
 		
@@ -114,7 +114,7 @@ class MX_Loader extends CI_Loader
 	}
 
 	/** Load an array of helpers **/
-	public function helpers($helpers) {
+	public function helpers($helpers = array()) {
 		foreach ($helpers as $_helper) $this->helper($_helper);	
 	}
 
